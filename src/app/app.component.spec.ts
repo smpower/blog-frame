@@ -1,6 +1,13 @@
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+
+@Component({selector: 'app-toolbar', template: ''})
+class AppToolbarComponent {}
+
+@Component({selector: 'router-outlet', template: ''})
+class RouterOutletComponent {}
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -8,7 +15,12 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent ]
+      declarations: [
+        AppComponent,
+        AppToolbarComponent,
+        RouterOutletComponent
+      ],
+      // schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));
