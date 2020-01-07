@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./welcome/welcome.component.less', './app.component.less']
 })
-export class AppComponent {
-  title = 'blog-frame';
-}
+export class AppComponent {}
