@@ -6,9 +6,27 @@
   background-color: #1976d2;
   color: white;
   font-weight: 600;
+  
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #186fc5;
+    }
+    span {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+  }
 
   img {
-    margin: 0 16px;
+    margin-right: 16px;
   }
 
   #twitter-logo {
