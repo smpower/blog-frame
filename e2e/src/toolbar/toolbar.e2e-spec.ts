@@ -10,13 +10,15 @@ describe('ToolbarComponent', () => {
   });
 
   it('should click Home link', () => {
-    component.getHomeTitle().target.click();
     expect(component.getHomeTitle().text).toEqual('Home');
+    component.getHomeTitle().target.click();
+    expect(browser.getTitle()).toEqual('Blog Frame - Home');
   });
 
   it('should click Welcome link', () => {
-    component.getWelcomeTitle().target.click();
     expect(component.getWelcomeTitle().text).toEqual('Welcome');
+    component.getWelcomeTitle().target.click();
+    expect(browser.getTitle()).toEqual('Blog Frame - Welcome');
   })
 
   afterEach(async () => {

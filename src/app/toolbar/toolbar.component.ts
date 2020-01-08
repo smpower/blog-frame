@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+  }
+
+  // Should set Home page's title.
+  setHomeTitle(): void {
+    this.titleService.setTitle('Blog Frame - Home');
+  }
+
+  // Should set Welcome page's title.
+  setWelcomeTitle(): void {
+    this.titleService.setTitle('Blog Frame - Welcome');
   }
 
 }

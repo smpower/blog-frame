@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-welcome',
@@ -8,5 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
   title = 'blog-frame';
 
-  ngOnInit() {}
+  constructor(private titleService: Title) { }
+
+  ngOnInit() {
+    this.titleService.setTitle('Blog Frame - Welcome');
+  }
 }
