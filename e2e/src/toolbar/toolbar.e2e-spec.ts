@@ -5,7 +5,7 @@ describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
 
   beforeEach(() => {
-    component = new ToolbarComponent;
+    component = new ToolbarComponent();
     component.navigateTo();
   });
 
@@ -19,7 +19,7 @@ describe('ToolbarComponent', () => {
     expect(component.getWelcomeTitle().text).toEqual('Welcome');
     component.getWelcomeTitle().target.click();
     expect(browser.getTitle()).toEqual('Blog Frame - Welcome');
-  })
+  });
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
@@ -28,4 +28,4 @@ describe('ToolbarComponent', () => {
       level: logging.Level.SEVERE,
     } as logging.Entry));
   });
-})
+});
