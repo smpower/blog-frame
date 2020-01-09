@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavComponent,
+    SidenavContentComponent
   ],
   imports: [
     BrowserModule,
