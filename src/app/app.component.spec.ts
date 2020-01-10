@@ -1,13 +1,10 @@
-import { Component, /* NO_ERRORS_SCHEMA */ } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, /* NO_ERRORS_SCHEMA */ } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 
 @Component({selector: 'app-toolbar', template: ''})
 class AppToolbarComponent {}
-
-@Component({selector: 'router-outlet', template: ''})
-class RouterOutletComponent {}
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -17,10 +14,10 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        AppToolbarComponent,
-        RouterOutletComponent
+        AppToolbarComponent
       ],
       // schemas: [ NO_ERRORS_SCHEMA ]
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));

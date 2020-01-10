@@ -1,13 +1,7 @@
-import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-
-@Component({selector: 'app-sidenav', template: ''})
-class SidenavComponent {}
-
-@Component({selector: 'app-sidenav-content', template: ''})
-class SidenavContentComponent {}
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -16,10 +10,9 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        HomeComponent,
-        SidenavComponent,
-        SidenavContentComponent
-      ]
+        HomeComponent
+      ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
