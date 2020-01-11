@@ -1,6 +1,6 @@
 <div class="sidenav-container">
   <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>
+    <mat-drawer #drawer mode="side" [opened]="matDrawerService.opened">
       <app-sidenav></app-sidenav>
     </mat-drawer>
     <mat-drawer-content>
