@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { MatDrawerService } from '../services/'
+import { MatDrawerService } from '../services/';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +8,13 @@ import { MatDrawerService } from '../services/'
 })
 export class HomeComponent implements OnInit {
 
+  matDrawerOpened: boolean;
+
   constructor(public matDrawerService: MatDrawerService) {
   }
 
-  matDrawerOpened: boolean = this.matDrawerService.opened;
-  
   ngOnInit() {
+    this.matDrawerOpened = this.matDrawerService.opened;
   }
   
 }

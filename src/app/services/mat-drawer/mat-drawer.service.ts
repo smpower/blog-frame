@@ -5,10 +5,12 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class MatDrawerService {
-  
-  constructor() { }
 
-  opened: boolean = true;
+  opened: boolean;
+  
+  constructor() {
+    this.opened = true;
+  }
 
   toggle(): Observable<boolean> {
     return of(this.opened = !this.opened);
