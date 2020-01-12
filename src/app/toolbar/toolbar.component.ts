@@ -10,6 +10,8 @@ import { MatDrawerService } from '../services/'
 })
 export class ToolbarComponent implements OnInit {
 
+  pageTitle: string;
+
   constructor(
     private titleService: Title,
     private matDrawerService: MatDrawerService
@@ -20,14 +22,17 @@ export class ToolbarComponent implements OnInit {
 
   // Should set Home page's title.
   setHomeTitle(): void {
-    this.titleService.setTitle('Blog Frame - Home');
+    this.pageTitle = 'Blog Frame - Home';
+    this.titleService.setTitle(this.pageTitle);
   }
 
   // Should set Welcome page's title.
   setWelcomeTitle(): void {
-    this.titleService.setTitle('Blog Frame - Welcome');
+    this.pageTitle = 'Blog Frame - Welcome';
+    this.titleService.setTitle(this.pageTitle);
   }
 
+  // Should toggle mat-sidenav.
   toggle(): void {
     this.matDrawerService.toggle()
       .subscribe(opened => opened);
