@@ -10,6 +10,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SidenavContentComponent } from './sidenav-content/sidenav-content.compo
     ToolbarComponent,
     HomeComponent,
     SidenavComponent,
-    SidenavContentComponent
+    SidenavContentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
