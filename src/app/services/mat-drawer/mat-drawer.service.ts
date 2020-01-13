@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 export class MatDrawerService {
 
   opened: boolean;
-  
+
   constructor() {
     this.opened = true;
   }
@@ -15,5 +15,5 @@ export class MatDrawerService {
   toggle(): Observable<boolean> {
     return of(this.opened = !this.opened);
   }
-  
+
 }
