@@ -4,5 +4,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "prettier.endOfLine": "lf",
-    "html.format.endWithNewline": true
+    "html.format.endWithNewline": true,
+    "editor.formatOnSave": true,
+    "typescript.format.semicolons": "insert"
 }
