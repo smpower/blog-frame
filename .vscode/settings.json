@@ -1,4 +1,8 @@
 {
     "editor.tabSize": 2,
-    "prettier.useTabs": false
+    "prettier.useTabs": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "prettier.endOfLine": "lf",
+    "html.format.endWithNewline": true
 }
