@@ -10,6 +10,12 @@
     "e2e": "ng e2e",
     "format": "npx prettier --write ./{src,e2e}/**/*.{js,ts,json,less,html}"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run lint",
+      "pre-push": "ng test --no-watch --code-coverage"
+    }
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
@@ -37,6 +43,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "husky": "^4.0.7",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
