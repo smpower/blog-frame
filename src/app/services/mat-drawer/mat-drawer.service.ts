@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MatDrawerService {
-
   opened: boolean;
 
   constructor() {
@@ -13,7 +12,6 @@ export class MatDrawerService {
   }
 
   toggle(): Observable<boolean> {
-    return of(this.opened = !this.opened);
+    return of((this.opened = !this.opened));
   }
-
 }

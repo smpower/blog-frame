@@ -20,15 +20,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     SidenavComponent,
     SidenavContentComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSidenavModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSidenavModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

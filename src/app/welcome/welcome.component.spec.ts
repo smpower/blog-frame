@@ -5,12 +5,8 @@ import { WelcomeComponent } from './welcome.component';
 describe('WelcomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        WelcomeComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [WelcomeComponent],
     }).compileComponents();
   }));
 

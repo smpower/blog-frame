@@ -1,24 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-import { MatDrawerService } from '../services/'
+import { MatDrawerService } from '../services/';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.less']
+  styleUrls: ['./toolbar.component.less'],
 })
 export class ToolbarComponent implements OnInit {
-
   pageTitle: string;
 
-  constructor(
-    private titleService: Title,
-    private matDrawerService: MatDrawerService
-  ) { }
+  constructor(private titleService: Title, private matDrawerService: MatDrawerService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // Should set Home page's title.
   setHomeTitle(): void {
@@ -34,8 +29,6 @@ export class ToolbarComponent implements OnInit {
 
   // Should toggle mat-sidenav.
   toggle(): void {
-    this.matDrawerService.toggle()
-      .subscribe(opened => opened);
+    this.matDrawerService.toggle().subscribe((opened) => opened);
   }
-
 }

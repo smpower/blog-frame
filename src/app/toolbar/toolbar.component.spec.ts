@@ -10,9 +10,8 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToolbarComponent ]
-    })
-    .compileComponents();
+      declarations: [ToolbarComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -40,5 +39,5 @@ describe('ToolbarComponent', () => {
 
   it('should toggle status of mat-drawer', () => {
     expect(component.toggle()).toBeFalsy();
-  })
+  });
 });

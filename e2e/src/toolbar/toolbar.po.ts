@@ -11,14 +11,14 @@ export class ToolbarComponent {
   getHomeTitle() {
     return {
       target: this.HomeLinkElement,
-      text: this.HomeLinkElement.getText() as Promise<any>
+      text: this.HomeLinkElement.getText() as Promise<any>,
     };
   }
 
   getWelcomeTitle() {
     return {
       target: this.WelcomeLinkElement,
-      text: this.WelcomeLinkElement.getText() as Promise<any>
+      text: this.WelcomeLinkElement.getText() as Promise<any>,
     };
   }
 }
