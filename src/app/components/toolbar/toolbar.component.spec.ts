@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ToolbarComponent } from './toolbar.component';
-import { MatDrawerService } from '../services/';
+import { MatDrawerService } from '../../services/';
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
