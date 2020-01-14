@@ -5,22 +5,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { HomeComponent } from './home/home.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent, WelcomeComponent, PageNotFoundComponent } from './pages/';
+import { ToolbarComponent, SidenavComponent, SidenavContentComponent } from './components/';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
-    ToolbarComponent,
     HomeComponent,
+    WelcomeComponent,
+    PageNotFoundComponent,
+    ToolbarComponent,
     SidenavComponent,
     SidenavContentComponent,
-    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatSidenavModule],
   providers: [],
