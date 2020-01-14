@@ -1,6 +1,6 @@
 {
   "name": "blog-frame",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,12 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "npx prettier --write ./{src,e2e}/**/*.{js,ts,json,less,html}"
+    "format": "npx prettier --write ./{src,e2e}/**/*.{js,ts,json,less,html}",
+    "code-coverage": "ng test --no-watch --code-coverage --code-coverage-exclude=src/app/services/index.ts"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run format && npm run lint",
-      "pre-push": "ng test --no-watch --code-coverage"
+      "pre-push": "npm run code-coverage"
     }
   },
   "private": true,
