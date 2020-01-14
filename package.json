@@ -9,12 +9,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format": "npx prettier --write ./{src,e2e}/**/*.{js,ts,json,less,html}",
-    "code-coverage": "ng test --no-watch --code-coverage --code-coverage-exclude=src/app/services/index.ts"
+    "code-coverage": "ng test --no-watch --code-coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run lint",
-      "pre-push": "npm run code-coverage"
+      "pre-commit": "npm run format && npm run lint"
     }
   },
   "private": true,
